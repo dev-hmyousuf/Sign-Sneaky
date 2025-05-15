@@ -3,13 +3,15 @@ dotenv.config();
 
 import app from "./app.js";
 
-// Health check endpoint that Railway uses to verify your app is running
+// Make sure the root route is properly defined for Railway health checks
 app.get("/", (req, res) => {
   res.json({ status: "API is running" });
 });
 
-const PORT = process.env.PORT || 3000;
+// Use the PORT provided by Railway
+const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, () => {
+// Start the server and log the actual port
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
