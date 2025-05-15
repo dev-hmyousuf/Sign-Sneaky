@@ -292,7 +292,7 @@ export default function Game(): React.ReactElement {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-b from-orange-50 via-orange-100 to-orange-200 flex flex-col justify-center items-center select-none touch-none py-2">
+    <div className="overflow-hidden w-full min-h-screen bg-gradient-to-b from-orange-50 via-orange-100 to-orange-200 flex flex-col justify-center items-center select-none touch-none py-2">
       <div className="w-[95%] max-w-2xl mx-auto">
         <Header
           reloadGame={reloadGame}
