@@ -16,8 +16,9 @@ const Leaderboard: React.FC = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        // Call your backend API here (not Clerk API directly)
-        const response = await fetch("http://localhost:3000/api/leaderboard");
+        // Use environment variable or fallback to localhost
+        const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+        const response = await fetch(`${API_URL}/api/leaderboard`);
         
         if (!response.ok) {
           const errorText = await response.text();
