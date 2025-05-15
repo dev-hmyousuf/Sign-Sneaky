@@ -7,7 +7,7 @@ import Food from './Game/Food';
 import Header from './Game/Header';
 import Score from './Game/Score';
 import Snake from './Game/Snake';
-import { useUser, useClerk } from '@clerk/clerk-react';
+import { useUser } from '@clerk/clerk-react'; // Removed useClerk
 import { useGesture } from '@use-gesture/react';
 
 const SNAKE_INITIAL_POSITION: Coordinate[] = [{ x: 5, y: 5 }];

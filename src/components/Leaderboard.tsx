@@ -117,7 +117,7 @@ const Leaderboard: React.FC = () => {
       
       <div className="mt-6 text-center">
         <p className="text-orange-500 italic">Keep playing to improve your score!</p>
-        // Fix the empty ReactNode issue by adding null or undefined
+        {/* Fix the empty ReactNode issue by adding null or undefined */}
         {user && (
           <div className="mt-4 p-3 bg-orange-50 rounded-full inline-block border border-orange-200">
             <span className="text-orange-700">Your best score: </span>
