@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { Direction, Coordinate } from './types/types';
+import { Direction, Coordinate } from '../types/types';
 import { checkEatsFood } from '../utils/CheckEatsFood';
 import { checkGameOver } from '../utils/CheckGameOver';
 import { randomFoodPosition } from '../utils/randomFoodPosition';
