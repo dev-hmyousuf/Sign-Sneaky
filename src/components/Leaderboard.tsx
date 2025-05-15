@@ -17,7 +17,7 @@ const Leaderboard: React.FC = () => {
     const fetchLeaderboard = async () => {
       try {
         // Use environment variable or fallback to localhost
-        const API_URL = 'https://sign-sneaky.onrender.com' ;
+        const API_URL = 'https://signsneaky.onrender.com' ;
         const response = await fetch(`${API_URL}/api/leaderboard`);
 
         if (!response.ok) {
