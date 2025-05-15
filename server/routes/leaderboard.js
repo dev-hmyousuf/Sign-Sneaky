@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
       "https://api.clerk.com/v1/users?limit=100&offset=0&order_by=-created_at",
       {
         headers: {
-          Authorization: `Bearer ${process.env.CLERK_SECRET_KEY}`,
+          Authorization: `Bearer ${process.env.CLERK_SECRET_KEY} `,
           "Content-Type": "application/json",
         },
       }
