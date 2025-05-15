@@ -2,7 +2,7 @@ import {
   SignInButton,
   SignedIn,
   SignedOut,
-  ClerkProvider,
+  // ClerkProvider is imported but never used
 } from '@clerk/clerk-react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 

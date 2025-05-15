@@ -1,5 +1,6 @@
 
-import React, { useEffect, useState } from "react";
+// Remove React import if not using JSX transform
+import { useEffect, useState } from "react";
 
 function getRandomFruitEmoji() {
   const fruitEmojis = ["🍎", "🍊", "🍋", "🍇", "🍉", "🍓", "🍑", "🍍", "🍒", "🥭"];
@@ -12,7 +13,8 @@ interface FoodProps {
   y: number;
 }
 
-export default function Food({ x, y }: FoodProps): JSX.Element {
+// Change JSX.Element to React.ReactElement
+export default function Food({ x, y }: FoodProps): React.ReactElement {
   const [emoji, setEmoji] = useState(getRandomFruitEmoji());
   
   // Change food emoji when position changes

@@ -1,11 +1,12 @@
-import React from 'react';
+// Remove React import if not using JSX transform
 import { Coordinate } from '../../types/types';
 
 interface SnakeProps {
   snake: Coordinate[];
 }
 
-export default function Snake({ snake }: SnakeProps): JSX.Element {
+// Change JSX.Element to React.ReactElement
+export default function Snake({ snake }: SnakeProps): React.ReactElement {
   return (
     <>
       {snake.map((segment, index) => {

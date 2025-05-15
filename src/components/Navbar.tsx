@@ -1,5 +1,5 @@
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { UserButton } from '@clerk/clerk-react'
 import { Link } from 'react-router-dom'
 import { FaStaffSnake } from "react-icons/fa6";
@@ -10,7 +10,8 @@ const navigation = [
   { name: 'Leaderboard', href: '/leaderboard', current: false },
 ]
 
-function classNames(...classes) {
+// Fix the any[] type
+function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(' ')
 }
 

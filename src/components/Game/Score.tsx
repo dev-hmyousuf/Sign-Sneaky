@@ -1,10 +1,10 @@
-import React from "react";
-
+// Remove React import if not using JSX transform
 interface ScoreProps {
   score: number;
 }
 
-export default function Score({ score }: ScoreProps): JSX.Element {
+// Change JSX.Element to React.ReactElement
+export default function Score({ score }: ScoreProps): React.ReactElement {
   return (
     <div className="flex items-center">
       <div className="text-xl font-bold mr-2 text-orange-800">Score:</div>

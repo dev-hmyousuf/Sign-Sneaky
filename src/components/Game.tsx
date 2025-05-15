@@ -16,7 +16,8 @@ const GAME_BOUNDS = { xMin: 0, xMax: 35, yMin: 0, yMax: 61 };
 const MOVE_INTERVAL = 50;
 const SCORE_INCREMENT = 1;
 
-export default function Game(): JSX.Element {
+// Change JSX.Element to React.ReactElement
+export default function Game(): React.ReactElement {
   const [direction, setDirection] = useState<Direction>(Direction.Right);
   const [snake, setSnake] = useState<Coordinate[]>(SNAKE_INITIAL_POSITION);
   const [food, setFood] = useState<Coordinate>(FOOD_INITIAL_POSITION);
@@ -26,11 +27,12 @@ export default function Game(): JSX.Element {
   const [gameSpeed, setGameSpeed] = useState<number>(MOVE_INTERVAL);
 
   const { user } = useUser();
-  const { client } = useClerk();
+  // Remove or comment out the unused client
+  // const { client } = useClerk();
 
   // Generate food in a position not occupied by the snake
   const generateFood = useCallback(() => {
-    let newFood: Coordinate;
+    let newFood: Coordinate = { x: 0, y: 0 }; // Initialize with default values
     let foodOnSnake = true;
 
     // Keep generating until we find a position not on the snake
