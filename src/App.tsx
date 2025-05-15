@@ -2,6 +2,7 @@ import {
   SignInButton,
   SignedIn,
   SignedOut,
+  useUser
   // ClerkProvider is imported but never used
 } from '@clerk/clerk-react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
@@ -12,6 +13,10 @@ import Leaderboard from './components/Leaderboard';
 // component imports
 
 function App() {
+
+  const { user } = useUser();
+
+  
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-b from-orange-50 via-orange-100 to-orange-200">

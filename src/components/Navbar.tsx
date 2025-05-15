@@ -1,14 +1,12 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { UserButton } from '@clerk/clerk-react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { FaStaffSnake } from "react-icons/fa6";
 
 
-const navigation = [
-  { name: 'Game', href: '/game', current: true },
-  { name: 'Leaderboard', href: '/leaderboard', current: false },
-]
+
+
 
 // Fix the any[] type
 function classNames(...classes: string[]): string {
@@ -16,6 +14,13 @@ function classNames(...classes: string[]): string {
 }
 
 export default function Navbar() {
+
+  const navigation = [
+    { name: 'Game', href: '/game', current: useLocation().pathname === '/game' ? true : false },
+    { name: 'Leaderboard', href: '/leaderboard', current: useLocation().pathname === '/leaderboard' },
+  ]
+
+  
   return (
     <Disclosure as="nav" className="bg-gradient-to-r from-orange-600 to-orange-500 shadow-md">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">

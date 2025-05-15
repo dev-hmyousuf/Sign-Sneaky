@@ -17,7 +17,7 @@ const Leaderboard: React.FC = () => {
     const fetchLeaderboard = async () => {
       try {
         // Use environment variable or fallback to localhost
-        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+        const API_URL = 'https://sign-sneaky.onrender.com' ;
         const response = await fetch(`${API_URL}/api/leaderboard`);
 
         if (!response.ok) {

@@ -68,7 +68,7 @@ export default function Header({
           className="p-2 sm:p-3 bg-white bg-opacity-90 rounded-full shadow-lg hover:scale-110 transition-all duration-300 active:scale-95 border-2 border-orange-200"
           aria-label="Reload Game"
         >
-          <MdRestartAlt size={20} className="text-orange-600 sm:size-24" />
+          <MdRestartAlt size={20} className="text-orange-600 sm:text-2xl" />
         </button>
 
         <button 
@@ -77,9 +77,9 @@ export default function Header({
           aria-label={isPaused ? "Play" : "Pause"}
         >
           {isPaused ? (
-            <FaPlayCircle size={20} className="text-orange-600 sm:size-24" />
+            <FaPlayCircle size={20} className="text-orange-600 sm:text-2xl" />
           ) : (
-            <FaPauseCircle size={20} className="text-orange-600 sm:size-24" />
+            <FaPauseCircle size={20} className="text-orange-600 sm:text-2xl" />
           )}
         </button>
       </div>
