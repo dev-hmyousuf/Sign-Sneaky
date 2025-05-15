@@ -1,5 +1,6 @@
 import {
-  SignInButton,
+  GoogleOneTap,
+  SignIn,
   SignedIn,
   SignedOut,
 } from '@clerk/clerk-react';
@@ -15,6 +16,8 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-b from-orange-50 via-orange-100 to-orange-200">
+        <Navbar /> {/* ✅ Now inside <Router> */}
+
         <Routes>
           {/* Public Routes */}
           <Route path="/tos" element={<Tos />} />
@@ -22,19 +25,14 @@ function App() {
         </Routes>
 
         <SignedOut>
-          <div className="flex flex-col items-center justify-center min-h-screen">
-            <div className="bg-white p-8 rounded-xl shadow-lg max-w-md w-full">
-              <h1 className="text-3xl font-bold text-orange-600 mb-6 text-center">Snake Game</h1>
-              <p className="text-gray-600 mb-6 text-center">Please sign in to play the game</p>
-              <div className="flex justify-center">
-                <SignInButton mode="modal" />
-              </div>
-            </div>
+          <div className='flex justify-center items-center h-screen '>
+
+          <SignIn />
+          <GoogleOneTap />
           </div>
         </SignedOut>
 
         <SignedIn>
-          <Navbar />
           <Routes>
             <Route path="/" element={<Navigate to="/game" />} />
             <Route path="/game" element={<Game />} />

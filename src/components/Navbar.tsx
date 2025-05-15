@@ -18,6 +18,9 @@ export default function Navbar() {
   const navigation = [
     { name: 'Game', href: '/game', current: useLocation().pathname === '/game' ? true : false },
     { name: 'Leaderboard', href: '/leaderboard', current: useLocation().pathname === '/leaderboard' },
+    { name: 'Terms of service', href: '/tos', current: useLocation().pathname === '/tos' },
+    { name: 'Privacy Policy', href: '/privacy', current: useLocation().pathname === '/privacy' },
+
   ]
 
   
