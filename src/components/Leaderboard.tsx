@@ -137,9 +137,7 @@ const Leaderboard: React.FC = () => {
                 0}
             </span>
           </div>
-        ) : (
-          <div></div>  // Replace empty fragment with an empty div
-        )}
+        ) : null}
       </div>
     </div>
   );
