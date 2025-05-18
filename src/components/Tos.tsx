@@ -1,15 +1,16 @@
 // app/terms/page.tsx
 export default function TermsOfService() {
   return (
-    <main className="max-w-4xl mx-auto p-10 bg-white rounded-xl shadow-lg mt-16 mb-28 text-gray-900 scroll-smooth">
+    <main className="max-w-4xl sm:max-w-[90%] mx-auto p-10 bg-white rounded-xl shadow-lg mt-16 mb-28 text-gray-900 scroll-smooth overflow-y-auto">
       <h1 className="text-6xl font-extrabold text-orange-600 mb-10 text-center tracking-tight">
         Terms of Service
       </h1>
 
       <section className="mb-12 text-lg leading-relaxed space-y-6">
         <p>
-          Welcome to <strong>Sign Sneaky</strong>, a snake game developed by <strong>Athex Web3</strong>.
-          By accessing or using our game, you agree to be bound by these Terms of Service.
+          Welcome to <strong>Sign Sneaky</strong>, a snake game developed by{' '}
+          <strong>Athex Web3</strong>. By accessing or using our game, you agree
+          to be bound by these Terms of Service.
         </p>
       </section>
 
@@ -18,8 +19,9 @@ export default function TermsOfService() {
           1. Eligibility
         </h2>
         <p className="text-lg leading-relaxed text-gray-700">
-          This game is open to users of all ages. However, users under the applicable legal age should
-          get parental or guardian consent before using this game.
+          This game is open to users of all ages. However, users under the
+          applicable legal age should get parental or guardian consent before
+          using this game.
         </p>
       </section>
 
@@ -28,8 +30,9 @@ export default function TermsOfService() {
           2. Account & Authentication
         </h2>
         <p className="text-lg leading-relaxed text-gray-700">
-          We use <strong>Clerk</strong> for authentication. By signing in with Google,
-          you agree to Clerk's terms and Google's authentication policies.
+          We use <strong>Clerk</strong> for authentication. By signing in with
+          Google, you agree to Clerk's terms and Google's authentication
+          policies.
         </p>
       </section>
 
@@ -38,8 +41,10 @@ export default function TermsOfService() {
           3. Game Usage
         </h2>
         <p className="text-lg leading-relaxed text-gray-700">
-          Sign Sneaky is a free game. There are no advertisements, in-app purchases, or premium features.
-          Your game score (gamePoints) is recorded using Clerk’s unsafe metadata and displayed on the leaderboard.
+          Sign Sneaky is a free game. There are no advertisements, in-app
+          purchases, or premium features. Your game score (gamePoints) is
+          recorded using Clerk’s unsafe metadata and displayed on the
+          leaderboard.
         </p>
       </section>
 
@@ -63,7 +68,8 @@ export default function TermsOfService() {
           5. Termination
         </h2>
         <p className="text-lg leading-relaxed text-gray-700">
-          We reserve the right to suspend or terminate access if any misuse or suspicious activity is detected.
+          We reserve the right to suspend or terminate access if any misuse or
+          suspicious activity is detected.
         </p>
       </section>
 
