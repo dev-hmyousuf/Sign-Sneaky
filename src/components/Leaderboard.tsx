@@ -43,7 +43,7 @@ const Leaderboard: React.FC = () => {
 
   if (loading)
     return (
-      <div className="flex justify-center items-center h-64">
+      <div className="flex justify-center items-center h-64 overflow-auto">
         <svg
           className="animate-spin h-10 w-10 text-orange-600"
           xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ const Leaderboard: React.FC = () => {
     );
 
   return (
-    <div className="max-w-2xl mx-auto p-8 mt-8 bg-white bg-opacity-90 rounded-2xl shadow-xl">
+    <div className="max-w-2xl mx-auto p-8 mt-8 bg-white bg-opacity-90 rounded-2xl shadow-xl overflow-auto">
       <h1 className="text-3xl font-bold text-orange-600 mb-6 text-center">
         Leaderboard
       </h1>
@@ -82,7 +82,7 @@ const Leaderboard: React.FC = () => {
           </p>
         </div>
       ) : (
-        <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl overflow-hidden border-2 border-orange-200">
+        <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl overflow-auto border-2 border-orange-200">
           <div className="bg-orange-600 text-white py-3 px-4 flex items-center font-bold">
             <span className="w-10 text-center">#</span>
             <span className="flex-1 ml-4">Player</span>
